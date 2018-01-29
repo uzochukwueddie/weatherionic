@@ -14,3 +14,72 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+ion-menu {
+    .toolbar-background {
+        background-color: color($colors, primary);
+    }
+
+    ion-buttons button {
+        background-color: transparent !important;
+        color: color($colors, lightwhite);
+    }
+
+    .delTrash {
+        background-color: transparent !important;
+    }
+
+    .menu-content {
+        background-color: color($colors, lightwhite);
+    }
+
+    .menu-content ion-list .cityName {
+        color: color($colors, graycolor);
+    }
+
+    .menu-content .cityName ion-badge {
+        background-color: inherit !important;
+        color: color($colors, graycolor);
+        font-size: 1.5rem !important;
+    }
+
+    .ion-md-trash {
+        color: color($colors, primary);
+    }
+
+    .addBtn {
+        background-color: color($colors, primary);
+        color: color($colors, lightwhite);
+    }
+
+    .list-md {
+        margin: 0 !important;
+    }
+
+    .menu-content ion-list .units {
+        background-color: color($colors, lightwhite);
+        color: color($colors, graycolor);
+    }
+
+    .menu-content ion-list ion-badge {
+        background-color: inherit !important;
+        color: color($colors, graycolor);
+        font-size: 1.5rem !important;
+    }
+
+    .menu-content ion-list .icon_unit {
+        color: color($colors, primary);
+    }
+}
+
+.alertCss {
+    .alert-title {
+        color: color($colors, graycolor);
+    }
+
+    .alert-sub-title {
+        color: color($colors, graycolor);
+        margin-top: 15px !important;
+    }
+}
+

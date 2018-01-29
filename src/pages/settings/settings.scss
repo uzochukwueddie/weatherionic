@@ -1,0 +1,14 @@
+ion-header{
+    .toolbar-background {
+        background-color: color($colors, primary);
+    }
+
+    .toolbar-title{
+        color: color($colors, lightwhite);
+    }
+
+    ion-list-header{
+        color: color($colors, primary);
+        border: none !important;
+    }
+}

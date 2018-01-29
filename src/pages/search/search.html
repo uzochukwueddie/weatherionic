@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-navbar>
+    <ion-searchbar 
+    [(ngModel)]="autocomplete.city"
+    (keyup)="GetCityName()"
+    placeholder="Type City Name"></ion-searchbar>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let item of locationItems" (click)="AddItems(item)">
+      {{ item.structured_formatting.main_text }}
+    </ion-item>
+  </ion-list>
+</ion-content>

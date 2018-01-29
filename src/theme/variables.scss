@@ -13,6 +13,7 @@ $app-direction: ltr;
 
 
 @import "ionic.globals";
+@import "ionic.globals.ios";
 
 
 // Shared Variables
@@ -38,21 +39,23 @@ $colors: (
   secondary:  #32db64,
   danger:     #f53d3d,
   light:      #f4f4f4,
-  dark:       #222
+  dark:       #222,
+  lightwhite: #ffffff,
+  graycolor: #65737e
 );
 
 
 // App iOS Variables
 // --------------------------------------------------
 // iOS only Sass variables can go here
-
+$toolbar-ios-title-text-color: color($colors, lightwhite);
 
 
 
 // App Material Design Variables
 // --------------------------------------------------
 // Material Design only Sass variables can go here
-
+$toolbar-md-title-text-color: color($colors, lightwhite);
 
 
 

@@ -1,16 +1,48 @@
-<ion-menu [content]="content">
+<ion-menu persistent="true" [content]="content">
   <ion-header>
     <ion-toolbar>
-      <ion-title>Menu</ion-title>
+      <ion-title>City Management</ion-title>
+      <ion-buttons end>
+        <button (click)="showButton()">
+          <ion-icon name="create"></ion-icon>&nbsp; Edit
+        </button>
+      </ion-buttons>
     </ion-toolbar>
+    
   </ion-header>
 
-  <ion-content>
-    <ion-list>
-      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
-        {{p.title}}
+  <ion-content class="menu-content">
+    <ion-list *ngFor="let p of pages" no-lines>
+      <button ion-item menuClose (click)="openPage(p)" class="cityName" no-lines detail-none>
+        <ion-avatar item-left>
+          <img src="{{ p.icon }}">
+        </ion-avatar>
+        {{ p.current.name }}
+        <ion-badge item-end>{{ p.current.main.temp}}&deg;</ion-badge>
+
+        <button item-end *ngIf="hideDelete && loc != p.current.name" (click)="removeCity(p)" class="delTrash" no-lines detail-none>
+          <ion-icon name="trash"></ion-icon>
+        </button>
+
       </button>
     </ion-list>
+
+    <button ion-button menuClose full (click)="searchPage()" class="addBtn" no-lines detail-none>
+      <ion-icon name="add"></ion-icon>&nbsp;Add City
+    </button>
+
+    <ion-list *ngFor="let unit of weatherUnits" no-lines>
+      <button ion-item (click)="unit.show()" class="units" no-lines detail-none>
+        <ion-icon name="{{ unit.icon }}" class="icon_unit" item-left></ion-icon>
+        {{ unit.title }}
+        <ion-badge item-end>{{ unit.unit}}</ion-badge>
+      </button>
+    </ion-list>
+
+    <button ion-button menuClose full (click)="settingsPage()" class="addBtn" no-lines detail-none>
+      <ion-icon name="settings"></ion-icon>&nbsp;Settings
+    </button>
+
   </ion-content>
 
 </ion-menu>

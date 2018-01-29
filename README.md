@@ -1,0 +1,1 @@
+A mobile weather app built with ionic 3. The app uses open weather map api. The app displays current weather information of a given location and also forecast weather information. The google maps places autocomplete api is used. The app uses ionic native geolocation plugin.
